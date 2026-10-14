@@ -1,0 +1,887 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Privacy Policy | Business Manager</title>
+
+    <meta name="description"
+          content="Read the Privacy Policy for Business Manager, a Flutter-based business management and POS application for managing products, customers, sales, expenses, invoices, and local business data.">
+
+    <meta name="theme-color" content="#123b68">
+
+    <style>
+        :root {
+            --primary: #123b68;
+            --primary-light: #eaf2fc;
+            --accent: #2878d0;
+            --background: #f4f7fb;
+            --surface: #ffffff;
+            --text: #243247;
+            --muted: #65748b;
+            --border: #e2e8f0;
+            --success: #147d52;
+            --shadow: 0 12px 35px rgba(22, 44, 75, 0.08);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 25px;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+                         Roboto, Arial, sans-serif;
+            background: var(--background);
+            color: var(--text);
+            line-height: 1.8;
+            font-size: 15px;
+        }
+
+        a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #102c50, #1d5c9c);
+            color: white;
+            padding: 65px 20px 85px;
+            text-align: center;
+        }
+
+        .brand-icon {
+            width: 76px;
+            height: 76px;
+            margin: 0 auto 20px;
+            border-radius: 22px;
+            background: rgba(255, 255, 255, 0.14);
+            border: 1px solid rgba(255, 255, 255, 0.24);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 36px;
+        }
+
+        .hero h1 {
+            font-size: clamp(30px, 5vw, 45px);
+            line-height: 1.2;
+            margin-bottom: 14px;
+            font-weight: 750;
+        }
+
+        .hero p {
+            max-width: 650px;
+            margin: 0 auto;
+            color: #e0edff;
+            font-size: 16px;
+        }
+
+        .effective-date {
+            display: inline-block;
+            margin-top: 22px;
+            padding: 7px 15px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 30px;
+            font-size: 13px;
+            color: #ffffff;
+        }
+
+        .container {
+            width: min(1050px, calc(100% - 32px));
+            margin: -35px auto 55px;
+            position: relative;
+        }
+
+        .summary {
+            background: var(--surface);
+            border-radius: 18px;
+            padding: 26px;
+            box-shadow: var(--shadow);
+            margin-bottom: 25px;
+            border: 1px solid var(--border);
+        }
+
+        .summary h2 {
+            color: var(--primary);
+            margin-bottom: 10px;
+            font-size: 21px;
+        }
+
+        .summary p {
+            color: var(--muted);
+        }
+
+        .layout {
+            display: grid;
+            grid-template-columns: 255px minmax(0, 1fr);
+            gap: 25px;
+            align-items: start;
+        }
+
+        .toc {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 23px 18px;
+            position: sticky;
+            top: 20px;
+        }
+
+        .toc h2 {
+            font-size: 16px;
+            margin-bottom: 13px;
+            color: var(--primary);
+        }
+
+        .toc a {
+            display: block;
+            padding: 7px 9px;
+            color: var(--muted);
+            font-size: 13px;
+            border-radius: 7px;
+        }
+
+        .toc a:hover {
+            background: var(--primary-light);
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .content {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+            min-width: 0;
+        }
+
+        .policy-section {
+            background: var(--surface);
+            padding: 28px;
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            box-shadow: 0 4px 15px rgba(22, 44, 75, 0.025);
+            scroll-margin-top: 20px;
+        }
+
+        .policy-section h2 {
+            font-size: 21px;
+            color: var(--primary);
+            margin-bottom: 13px;
+            line-height: 1.4;
+        }
+
+        .policy-section h3 {
+            font-size: 16px;
+            color: var(--primary);
+            margin: 19px 0 8px;
+        }
+
+        .policy-section p {
+            margin-bottom: 12px;
+        }
+
+        .policy-section p:last-child {
+            margin-bottom: 0;
+        }
+
+        .policy-section ul {
+            padding-left: 23px;
+            margin: 10px 0 15px;
+        }
+
+        .policy-section li {
+            padding-left: 3px;
+            margin-bottom: 7px;
+        }
+
+        .note {
+            padding: 15px 17px;
+            background: var(--primary-light);
+            border-left: 4px solid var(--accent);
+            border-radius: 8px;
+            margin: 15px 0;
+        }
+
+        .note strong {
+            color: var(--primary);
+        }
+
+        .contact-card {
+            background: linear-gradient(135deg, #123b68, #1e619e);
+            color: white;
+            border: none;
+        }
+
+        .contact-card h2,
+        .contact-card a {
+            color: white;
+        }
+
+        .contact-card p {
+            color: #e5efff;
+        }
+
+        .contact-link {
+            display: inline-block;
+            background: white;
+            color: var(--primary) !important;
+            padding: 10px 18px;
+            margin-top: 10px;
+            border-radius: 9px;
+            font-weight: 650;
+        }
+
+        footer {
+            text-align: center;
+            padding: 28px 18px;
+            color: var(--muted);
+            font-size: 13px;
+            border-top: 1px solid var(--border);
+        }
+
+        footer strong {
+            color: var(--primary);
+        }
+
+        @media (max-width: 800px) {
+            .layout {
+                grid-template-columns: 1fr;
+            }
+
+            .toc {
+                position: static;
+            }
+
+            .toc-links {
+                display: grid;
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 3px;
+            }
+
+            .hero {
+                padding: 50px 18px 72px;
+            }
+
+            .policy-section {
+                padding: 23px 20px;
+            }
+        }
+
+        @media (max-width: 420px) {
+            .toc-links {
+                grid-template-columns: 1fr;
+            }
+
+            .summary {
+                padding: 21px;
+            }
+
+            .policy-section h2 {
+                font-size: 19px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header class="hero">
+    <div class="brand-icon" aria-hidden="true">💼</div>
+
+    <h1>Privacy Policy</h1>
+
+    <p>
+        Business Manager is designed to help small businesses manage their
+        daily operations while keeping their business information under
+        their control.
+    </p>
+
+    <span class="effective-date">
+        Effective Date: October 14, 2026
+    </span>
+</header>
+
+<main class="container">
+
+    <section class="summary">
+        <h2>Your Business Data Matters</h2>
+
+        <p>
+            This Privacy Policy explains how Business Manager handles
+            information when you use the application. The app is designed
+            primarily around local storage, including a SQLite database
+            on your device. Depending on the features you use and the
+            configuration of your device, certain information may also
+            be processed by other services or included in files you
+            choose to export or share.
+        </p>
+    </section>
+
+    <div class="layout">
+
+        <aside class="toc">
+            <h2>On This Page</h2>
+
+            <nav class="toc-links" aria-label="Privacy policy sections">
+                <a href="#introduction">1. Introduction</a>
+                <a href="#information">2. Information We Handle</a>
+                <a href="#storage">3. Local Data Storage</a>
+                <a href="#permissions">4. Device Permissions</a>
+                <a href="#usage">5. How Data Is Used</a>
+                <a href="#sharing">6. Data Sharing</a>
+                <a href="#backup">7. Backups and Exports</a>
+                <a href="#security">8. Data Security</a>
+                <a href="#retention">9. Data Retention</a>
+                <a href="#rights">10. Your Choices</a>
+                <a href="#children">11. Children's Privacy</a>
+                <a href="#third-party">12. Third-Party Services</a>
+                <a href="#changes">13. Policy Changes</a>
+                <a href="#contact">14. Contact Us</a>
+            </nav>
+        </aside>
+
+        <div class="content">
+
+            <section class="policy-section" id="introduction">
+                <h2>1. Introduction</h2>
+
+                <p>
+                    Welcome to <strong>Business Manager</strong>, a business
+                    management and point-of-sale (POS) application developed
+                    by Saim. The application helps users organize products,
+                    inventory, customers, suppliers, sales, purchases,
+                    expenses, invoices, and business reports.
+                </p>
+
+                <p>
+                    This policy applies to the Business Manager application
+                    and explains our approach to information privacy,
+                    storage, security, and user control.
+                </p>
+
+                <p>
+                    By using the application, you acknowledge this policy.
+                    If you do not agree with it, please discontinue using
+                    the application.
+                </p>
+            </section>
+
+            <section class="policy-section" id="information">
+                <h2>2. Information We Handle</h2>
+
+                <p>
+                    Information entered into Business Manager depends on
+                    how you use its features. The application may store
+                    the following information locally on your device:
+                </p>
+
+                <h3>Business and Owner Information</h3>
+                <ul>
+                    <li>Business name and business contact details.</li>
+                    <li>Owner information entered in settings.</li>
+                    <li>Business address and invoice details, if provided.</li>
+                    <li>Currency, language, and application preferences.</li>
+                </ul>
+
+                <h3>Products and Inventory</h3>
+                <ul>
+                    <li>Product names, categories, prices, and descriptions.</li>
+                    <li>Stock quantities and low-stock information.</li>
+                    <li>Product images or related details, if supported and used.</li>
+                </ul>
+
+                <h3>Customers and Suppliers</h3>
+                <ul>
+                    <li>Names, phone numbers, addresses, and other details you enter.</li>
+                    <li>Customer transaction histories and supplier records.</li>
+                    <li>Purchase records and related payment information.</li>
+                </ul>
+
+                <h3>Sales, Expenses, and Invoices</h3>
+                <ul>
+                    <li>Sales transactions, sale items, quantities, and prices.</li>
+                    <li>Payments, outstanding balances, and expense records.</li>
+                    <li>Invoice numbers, totals, dates, and generated documents.</li>
+                    <li>Purchase history and business performance records.</li>
+                </ul>
+
+                <div class="note">
+                    <strong>Important:</strong>
+                    Avoid entering passwords, bank card security codes,
+                    government identification numbers, or other sensitive
+                    information unless a feature specifically requires it
+                    and you have a lawful reason to record it.
+                </div>
+
+                <p>
+                    We do not intentionally collect information simply
+                    because it exists on your device. Information handling
+                    depends on the app's implemented functionality and
+                    the actions you take.
+                </p>
+            </section>
+
+            <section class="policy-section" id="storage">
+                <h2>3. Local Data Storage</h2>
+
+                <p>
+                    Business Manager is designed to use a local SQLite
+                    database through Flutter's Sqflite functionality
+                    for storing business records.
+                </p>
+
+                <p>
+                    Where the relevant features are implemented, your
+                    information is stored locally on the device rather
+                    than automatically uploaded to a server operated
+                    by the developer.
+                </p>
+
+                <ul>
+                    <li>
+                        Business records can be available without an
+                        internet connection when their features support
+                        offline use.
+                    </li>
+                    <li>
+                        The developer does not automatically receive
+                        locally stored records merely because you use
+                        the application.
+                    </li>
+                    <li>
+                        Device backups, exported files, shared invoices,
+                        or third-party services may handle copies of
+                        your information separately.
+                    </li>
+                </ul>
+
+                <p>
+                    Local storage does not guarantee that information
+                    is encrypted. The level of protection depends on
+                    the device, operating system, app implementation,
+                    and any additional security measures enabled.
+                </p>
+            </section>
+
+            <section class="policy-section" id="permissions">
+                <h2>4. Device Permissions</h2>
+
+                <p>
+                    Business Manager may request access to certain device
+                    features when you use corresponding functionality.
+                    Permission availability depends on your device and
+                    the installed version of the application.
+                </p>
+
+                <h3>Camera and Barcode Scanning</h3>
+                <p>
+                    If barcode scanning is implemented, camera access
+                    may be used to scan product barcodes or QR codes.
+                    Camera access should be used for the feature you
+                    initiate.
+                </p>
+
+                <h3>Photos and Images</h3>
+                <p>
+                    If image selection is supported, photo or image
+                    access may be used to select product images or
+                    other content you choose to add.
+                </p>
+
+                <h3>Files and Document Access</h3>
+                <p>
+                    File access may be required to export or import
+                    database backups, save PDF invoices, or select
+                    documents for restoration.
+                </p>
+
+                <h3>Printing and Sharing</h3>
+                <p>
+                    Printing and sharing features may allow you to
+                    send invoices or exported files to a printer,
+                    another application, or a recipient you choose.
+                </p>
+
+                <p>
+                    You can manage available permissions through your
+                    device settings. Revoking a permission may prevent
+                    the associated feature from working correctly.
+                </p>
+
+                <p>
+                    Business Manager does not need access to a permission
+                    merely because that permission is listed here.
+                    Actual access depends on the app's implementation
+                    and the feature being used.
+                </p>
+            </section>
+
+            <section class="policy-section" id="usage">
+                <h2>5. How Information Is Used</h2>
+
+                <p>
+                    Information entered into the application is used
+                    to provide its business management functionality,
+                    including:
+                </p>
+
+                <ul>
+                    <li>Managing products, categories, and inventory.</li>
+                    <li>Recording sales, purchases, and expenses.</li>
+                    <li>Maintaining customer and supplier records.</li>
+                    <li>Calculating totals, balances, and business summaries.</li>
+                    <li>Generating invoices and PDF documents.</li>
+                    <li>Preparing reports and analytics from business records.</li>
+                    <li>Saving preferences such as currency and theme.</li>
+                    <li>Creating and restoring user-initiated backups.</li>
+                </ul>
+
+                <p>
+                    These operations are intended to help you manage
+                    your own business. The developer does not claim
+                    ownership of the business records you enter.
+                </p>
+            </section>
+
+            <section class="policy-section" id="sharing">
+                <h2>6. Data Sharing and Disclosure</h2>
+
+                <p>
+                    We do not intentionally transmit your locally stored
+                    business database to the developer or sell your
+                    business records to third parties as part of the
+                    app's intended local-storage functionality.
+                </p>
+
+                <p>
+                    Information may leave your device when you choose
+                    to share or export a file, use a third-party
+                    application, or enable an integration that transmits
+                    information.
+                </p>
+
+                <p>
+                    If you share an invoice or backup through email,
+                    messaging, cloud storage, or another application,
+                    that service may process the information according
+                    to its own privacy policy.
+                </p>
+
+                <p>
+                    Information may also be disclosed where required
+                    by applicable law or valid legal process, if such
+                    information is within our possession or control.
+                </p>
+
+                <p>
+                    We cannot control how recipients handle files
+                    after you share them.
+                </p>
+            </section>
+
+            <section class="policy-section" id="backup">
+                <h2>7. Database Backups and Exports</h2>
+
+                <p>
+                    Business Manager may provide functionality to
+                    export a database backup and restore data from
+                    a previously exported file.
+                </p>
+
+                <p>
+                    Backup files may contain sensitive business
+                    information, including customer details, supplier
+                    records, sales, expenses, and financial balances.
+                </p>
+
+                <ul>
+                    <li>Keep backup files in a secure location.</li>
+                    <li>
+                        Share backups only with people you trust
+                        and who are authorized to access the data.
+                    </li>
+                    <li>
+                        Avoid storing unprotected backups in public
+                        or shared folders.
+                    </li>
+                    <li>
+                        Verify the source of a backup before restoring it.
+                    </li>
+                    <li>
+                        Keep a separate backup before restoring a
+                        file that could replace existing information.
+                    </li>
+                </ul>
+
+                <p>
+                    Exported backups may remain available outside the
+                    application even after records are deleted from
+                    the app. You are responsible for managing copies
+                    stored in locations you control.
+                </p>
+            </section>
+
+            <section class="policy-section" id="security">
+                <h2>8. Data Security</h2>
+
+                <p>
+                    We recognize that business records can be sensitive.
+                    The application is designed to keep its primary
+                    business records in local storage, but no method
+                    of electronic storage is completely secure.
+                </p>
+
+                <p>
+                    To help protect your information, we recommend:
+                </p>
+
+                <ul>
+                    <li>Using a strong device screen lock.</li>
+                    <li>Keeping your operating system and app updated.</li>
+                    <li>Restricting access to your device.</li>
+                    <li>Protecting exported files and database backups.</li>
+                    <li>Avoiding the sharing of sensitive records through untrusted services.</li>
+                </ul>
+
+                <p>
+                    We cannot guarantee absolute security against
+                    unauthorized access, malware, device loss,
+                    hardware failure, or accidental deletion.
+                </p>
+
+                <p>
+                    Unless specifically implemented and documented
+                    in the application, do not assume that the
+                    SQLite database or exported backup files are
+                    encrypted or password-protected.
+                </p>
+            </section>
+
+            <section class="policy-section" id="retention">
+                <h2>9. Data Retention and Deletion</h2>
+
+                <p>
+                    Locally stored records generally remain on your
+                    device until you delete them, clear the relevant
+                    application data, uninstall the app, or the
+                    information is removed through an implemented
+                    application feature.
+                </p>
+
+                <p>
+                    Uninstalling the application may remove its local
+                    database and related private files, depending on
+                    the operating system and storage location. It
+                    may not remove files you exported or copies
+                    held by other applications or backup services.
+                </p>
+
+                <p>
+                    Before uninstalling the application or clearing
+                    its data, export a backup if you want to preserve
+                    your business records.
+                </p>
+
+                <p>
+                    We do not have a remote copy of locally stored
+                    information to delete unless that information
+                    has separately been transmitted to a service
+                    under your direction.
+                </p>
+            </section>
+
+            <section class="policy-section" id="rights">
+                <h2>10. Your Choices and Control</h2>
+
+                <p>
+                    You maintain control over the business information
+                    you choose to enter and how you use the available
+                    application features.
+                </p>
+
+                <ul>
+                    <li>
+                        <strong>Access:</strong>
+                        View records using the application's available screens.
+                    </li>
+                    <li>
+                        <strong>Correction:</strong>
+                        Edit records where the application provides an edit feature.
+                    </li>
+                    <li>
+                        <strong>Deletion:</strong>
+                        Delete records using available deletion features.
+                    </li>
+                    <li>
+                        <strong>Export:</strong>
+                        Use available backup and export features to preserve data.
+                    </li>
+                    <li>
+                        <strong>Permissions:</strong>
+                        Manage camera, photo, and file permissions through device settings.
+                    </li>
+                </ul>
+
+                <p>
+                    Available controls depend on the version of the
+                    application you use. You may contact the developer
+                    with privacy questions using the contact details below.
+                </p>
+            </section>
+
+            <section class="policy-section" id="children">
+                <h2>11. Children's Privacy</h2>
+
+                <p>
+                    Business Manager is intended as a business
+                    productivity tool for people managing business
+                    activities. It is not designed specifically
+                    for children.
+                </p>
+
+                <p>
+                    The application is not intended to knowingly
+                    collect personal information from children
+                    in violation of applicable privacy laws.
+                    If you believe a child has provided personal
+                    information through a service operated by
+                    the developer, please contact us so the
+                    situation can be reviewed.
+                </p>
+            </section>
+
+            <section class="policy-section" id="third-party">
+                <h2>12. Third-Party Services and External Applications</h2>
+
+                <p>
+                    The application may interact with external
+                    applications or services when you choose to
+                    share files, print documents, open links, or
+                    use other supported integrations.
+                </p>
+
+                <p>
+                    If analytics, advertising, crash reporting,
+                    cloud synchronization, or other network-based
+                    services are added or enabled in a version
+                    of Business Manager, those services may
+                    collect or process information according
+                    to their configurations and policies.
+                </p>
+
+                <p>
+                    Any third-party service actually integrated
+                    into the released application should be
+                    identified in the applicable disclosures.
+                    Review the relevant service's privacy policy
+                    before sharing information with it.
+                </p>
+
+                <p>
+                    This policy does not replace the privacy
+                    policies of external applications, websites,
+                    or service providers.
+                </p>
+            </section>
+
+            <section class="policy-section" id="changes">
+                <h2>13. Changes to This Privacy Policy</h2>
+
+                <p>
+                    This Privacy Policy may be updated when the
+                    application introduces new features, changes
+                    its data practices, or needs to reflect
+                    legal or regulatory requirements.
+                </p>
+
+                <p>
+                    When changes are made, the updated version
+                    will be published with a revised effective
+                    date. We encourage users to review this
+                    page periodically.
+                </p>
+
+                <p>
+                    Continued use of the application after an
+                    updated policy becomes effective is subject
+                    to the extent permitted by applicable law.
+                </p>
+            </section>
+
+            <section class="policy-section" id="contact">
+                <h2>14. Contact Us</h2>
+
+                <p>
+                    If you have questions, concerns, or requests
+                    regarding this Privacy Policy or the handling
+                    of information in Business Manager, contact
+                    the developer using the details below.
+                </p>
+
+                <h3>Developer Information</h3>
+
+                <p>
+                    <strong>Developer:</strong> Saim<br>
+                    <strong>Application:</strong> Business Manager<br>
+                    <strong>Email:</strong>
+                    <a href="mailto:saim501450@gmail.com">
+                        saim501450@gmail.com
+                    </a>
+                </p>
+
+                <a class="contact-link"
+                   href="mailto:saim501450@gmail.com?subject=Business%20Manager%20Privacy%20Inquiry">
+                    Contact Developer
+                </a>
+            </section>
+
+            <section class="policy-section">
+                <h2>15. Final Statement</h2>
+
+                <p>
+                    Business Manager is intended to make everyday
+                    business management simpler by helping users
+                    organize and manage their records in one place.
+                    We encourage all users to handle customer
+                    information responsibly, protect backup files,
+                    and use the application in accordance with
+                    applicable privacy and data protection laws.
+                </p>
+
+                <p>
+                    Thank you for using Business Manager.
+                </p>
+            </section>
+
+        </div>
+    </div>
+</main>
+
+<footer>
+    <p>
+        <strong>Business Manager</strong> &mdash; Business Management &amp; POS
+    </p>
+    <p>
+        &copy; 2026 Saim. All rights reserved.
+    </p>
+    <p>
+        Privacy Policy effective October 14, 2026.
+    </p>
+</footer>
+
+</body>
+</html>
+```
